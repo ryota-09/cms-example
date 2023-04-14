@@ -14,10 +14,8 @@ export default function Home() {
         <h1>タイトル</h1>
         <div>
           <ul className="flex">
-            <li className="hover-container inline-block relative">
-              <span className="px-4 py-2">
-                ガイド
-              </span>
+            <li className="z-0 hover-container inline-block relative">
+              <span>ガイド</span>
               <Image
                 className="absolute bottom-0 left-0 block"
                 src={"/bg_bdb02.png"}
@@ -32,6 +30,12 @@ export default function Home() {
                 width={100}
                 alt=""
               />
+            </li>
+            <li className="group">
+              <span className="transition-all duration-200 ease-in-out hover:shadow-top h-10 w-20 hover:bg-white">
+                ホバーして
+              </span>
+              <div className="z-20 hidden group-hover:block duration-200 bg-red-500 h-20 w-[100px]"></div>
             </li>
           </ul>
         </div>
