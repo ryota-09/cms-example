@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,9 +10,32 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1 className='bg-red-500'>タイトル</h1>
+      <main className="w-[1024px] mx-auto">
+        <h1>タイトル</h1>
+        <div>
+          <ul className="flex">
+            <li className="hover-container inline-block relative">
+              <span className="px-4 py-2">
+                ガイド
+              </span>
+              <Image
+                className="absolute bottom-0 left-0 block"
+                src={"/bg_bdb02.png"}
+                height={50}
+                width={100}
+                alt=""
+              />
+              <Image
+                className="hover-image absolute bottom-[-2.5px] left-0 hidden"
+                src={"/bg_bdb02.png"}
+                height={50}
+                width={100}
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
       </main>
     </>
-  )
+  );
 }
