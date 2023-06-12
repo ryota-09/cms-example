@@ -9,6 +9,22 @@ module.exports = {
       "top-lg":
         "0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05)",
     },
+    extend: {
+      animation: {
+        hoverFade: "hoverFade 0.8s ease-in-out",
+        customFade: "customFade 0.8s ease-in-out",
+      },
+      keyframes: {
+        hoverFade: {
+          "0%": { opacity: "1", visibility: "visible" },
+          "100%": { opacity: "0", visibility: "hidden" },
+        },
+        customFade: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+    },
   },
   plugins: [],
 };
